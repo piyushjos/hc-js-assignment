@@ -57,7 +57,7 @@ and maybe some  with margin.
 
 At that stage, things will be looking pretty good from a layout perspective on small screens. That means, without writing a single media query, you have a fully functional site on mobile.  
 
-For desktop view: I use @media only screen and (min-width: 768px) {...} this means the defined property apply when the screen size is 992px and up so for desktop view this property works fine.
+For desktop view: I use @media only screen and (min-width: 768px) {...} this means the defined property apply when the screen size is 768px and up so for desktop view this property works fine.
 
 Resources:https://www.youtube.com/watch?v=WTz4A8IdeEQ
          https://codepen.io/kevinpowell/pen/ZEGdQgN
