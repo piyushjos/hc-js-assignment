@@ -5,9 +5,9 @@ Assume that both layouts were created using a similar CSS grid. What would you d
 
 If you did not position “Next Day Shipping” absolutely to the right, why not? 
 
-solution1: with the help of direct class "right-align" we can perform the above task but only when we are using material css. 
-Solution2: if we are using normal css grid we can do it by simply use of "text-align right" on 3rd coloumn (div).
+                                                         Solution
 
+ first i use css grid layout  with the help of div element i make a row and in that row i made 3 coloumn so in easy term one row with 3 coloumn and as per task i need to make layout b look like layout a for that we need to apply text-align: right; to third div with help of class or we can do it by giving id as well by appliying this we can make layout b look like layout a.
 
  
 
@@ -15,16 +15,16 @@ Solution2: if we are using normal css grid we can do it by simply use of "text-a
 
 What is the difference between how Flexbox and CSS Grid calculate item/container size?
 
-Grid: Grid Layout, is a two-dimensional grid-based layout system with rows and coloumns
-Grid: CSS Grid deploys fractional measure units for grid fluidity and auto-keyword functionality to automatically adjust columns or rows.
-Grid:CSS Grid also makes it possible to create responsive layouts without using media queries. 
+*Main diffrence i found  that Grid is mainly focused on 2 dimensional And flex is genrally focus on 1 dimensional 
 
+*Approach of css grid is genrally whole layout and if we talk about flex it genrally focused on primary content.
 
-Flex: The CSS Flexbox offers a one-dimensional layout. It is helpful in allocating and aligning the space among items in a container (made of grids). It works with all kinds of display devices and screen sizes.:Flexbox only deals with either columns or rows.
-Flex: Flexbox mostly helps align content & move blocks.
-Flex: Flexbox layout items along either the horizontal or the vertical axis, so you have to decide whether you want a row-based or a column-based layout.
-Flex: A flex layout can also wrap in multiple rows or columns and flexbox treats each row or column as a separate entity, based on its content and the available space.
+*Flexbox either focus on only row or either focus on only coloumn but in case of grid it will focus on both row and coloumn.
 
+* one major diffrence when we have one conatiner with 5 children element if one of your items has a bigger size, then the entire layout would flex to accommodate the different sizes of the child elements.
+
+*But what if you want a strictly defined layout where each row has three columns no matter the size of the item?so in that case we have to manually calculate the widh of each child in flexbox .To resolve that problem we use css grid which have the ability to control the placement of items ore precisely.
+                                                            
 Cite 3 sources. 
 Provide links for all sources and time codes for videos.
 
@@ -37,24 +37,15 @@ Soution: https://www.youtube.com/watch?v=RSIclWvNTdQ
 
  You are writing a responsive layout for a website that has dramatically different layouts for mobile and desktop. Which of the following media queries would you use and why?
 
-1.@media (max-width: …
-2.@media (min-width: …
+solution:
+First i go with mobile layout  design because The view for the very smallest devices is quite often a simple single column of content, much as it appears in normal flow. This means that you probably don't need to do a lot of layout for small devices — order your source well and you will have a readable layout by default.
 
-Solution It is used to make responsive website:
+For mobile view i use @media only screen and "(max-width: 600px)" by applying this we can make resposive layout for mobile screen simply we can say whatever property we want to apply for example background color or any other it will apply on screen size which has size 0f 600px and below.   
 
-1.@media(max-width: Extra small devices (phones, 600px and down)
- If the browser window is 600px or smaller.
-
-2.@media only screen and (min-width: 600px):Small devices (portrait tablets and large phones, 600px and up)
-
-3.@media only screen and (min-width: 992px) {...}
-Large devices (laptops/desktops, 992px and up) 
-
-4.Extra large devices (large laptops and desktops, 1200px and up)
-@media only screen and (min-width: 1200px) {...}
+For desktop view: I use @media only screen and (min-width: 992px) {...} this means the defined property apply when the screen size is 992px and up so for desktop view this property works fine.
 
 Resources:https://www.youtube.com/watch?v=WTz4A8IdeEQ
-         :https://www.w3schools.com/css/css_rwd_mediaqueries.asp
+         https://codepen.io/kevinpowell/pen/ZEGdQgN
          :https://css-tricks.com/snippets/css/media-queries-for-standard-devices/
           
 
