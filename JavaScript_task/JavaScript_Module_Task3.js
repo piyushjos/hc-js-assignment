@@ -37,7 +37,7 @@ function checkPrime(number) {
 }
 input.forEach(function(element) {
     const isPrime = checkPrime(element);
-    if (!isPrime) {
+    if (isPrime) {
         console.log(`${element} is a prime number`);
     }
 });
