@@ -1,7 +1,8 @@
 // Implement a simple code to use a Promise
+"use strict";
 
 function getInfo(customer) {
-    var customer = { name: "piyush", age: 45 }
+    let customer = { name: "piyush", age: 45 }
     return new Promise(function(resolve, reject) {
 
 

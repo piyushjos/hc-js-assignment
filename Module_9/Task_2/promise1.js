@@ -1,4 +1,8 @@
 // Implement code to handle multiple promises.You have to fetch information of 5 different products from API
+
+
+"use strict";
+
 async function init() {
 
     const result = await Promise.allSettled([
