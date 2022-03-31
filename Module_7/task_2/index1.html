@@ -36,10 +36,12 @@
 </body>
 
 <script>
-    var table = document.querySelector('#table')
+    'use strict '
+
+    let table = document.querySelector('#table')
 
     table.addEventListener('click', function(e) {
-        var td = e.target
+        let td = e.target
 
         if (td.tagName !== 'TD') {
             return
