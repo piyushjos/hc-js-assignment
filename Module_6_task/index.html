@@ -55,10 +55,11 @@
 </body>
 </div>
 <script>
-    var secondTdArr3 = document.querySelectorAll("td:nth-child(3), tr th:nth-child(3)");
+    'use strict'
+    let secondTdArr3 = document.querySelectorAll("td:nth-child(3), tr th:nth-child(3)");
 
 
-    for (var i = 0; i <= secondTdArr3.length; i++) {
+    for (let i = 0; i <= secondTdArr3.length; i++) {
         console.log(secondTdArr3)
         secondTdArr3[i].addEventListener('click', () => {
             secondTdArr3.forEach(element => {
