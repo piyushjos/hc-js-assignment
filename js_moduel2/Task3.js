@@ -1,15 +1,15 @@
 // Provided the following array: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 // Filter out odd, even, and prime numbers and print them
 // 4. Provided the following array:
-
-var array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+'use strict'
+const array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 function odd(x) {
     if (x % 2 != 0) {
         return x
     }
 }
-var result = array.filter(odd)
+let result = array.filter(odd)
 
 console.log(`${result} are odd numbers`);
 
@@ -20,7 +20,7 @@ function even(y) {
         return y
     }
 }
-var result1 = array.filter(even)
+let result1 = array.filter(even)
 
 console.log(`${result1} are even numbers `);
 
@@ -39,5 +39,5 @@ function prime(a) {
     }
 
 }
-var result3 = array.filter(prime)
+let result3 = array.filter(prime)
 console.log(result3)

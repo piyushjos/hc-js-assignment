@@ -1,8 +1,8 @@
 // Provided the following array: [0, 2, 4, 6, 8, 10, 12, 14, 16]
 // Generate and print another list such that:
 //     a.every element being twice of elements in the current list.
-
-var array = [0,
+'use strict '
+let array = [0,
     2, 4, 6, 8, 10, 12, 14, 16
 ]
 

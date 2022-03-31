@@ -1,6 +1,7 @@
 // a.Find the sum, min, and max
-var input = [10, 1, 42, 36, 4, 75, 6, 97, 81, 19, 10]
-var result = input.reduce(function(acc, curr) {
+'use strict'
+let input = [10, 1, 42, 36, 4, 75, 6, 97, 81, 19, 10]
+let result = input.reduce(function(acc, curr) {
     acc = curr + acc;
     return acc;
 }, 0)
@@ -9,7 +10,7 @@ console.log("Total of element" + " " +
     result);
 
 
-var result_max = input.reduce(function(max, value) {
+let result_max = input.reduce(function(max, value) {
     if (value > max) {
         max = value
     }
@@ -19,7 +20,7 @@ console.log("Max element is" + " " +
     result_max);
 
 
-var result_min = input.reduce(function(min, value) {
+let result_min = input.reduce(function(min, value) {
     // min = value;
     if (value < min) {
         min = value
@@ -49,7 +50,7 @@ function prime(a) {
 
 }
 
-var result3 = input.every(prime)
+let result3 = input.every(prime)
 
 if (!result3) {
     console.log("list contain a number which is not prime")
@@ -98,7 +99,7 @@ function find_prime(b) {
 }
 
 
-var result4 = input.some(find_prime);
+let result4 = input.some(find_prime);
 
 if (result4) {
     console.log("list contain prime no")
