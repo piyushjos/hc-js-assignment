@@ -12,6 +12,7 @@
 // b.Create another list having id and name of all the person above 18 years
 // c.Find the average age
 // d.Create 2 list with names starting with only‘ A’ and‘ R’ respectively
+'use strict'
 
 let spot = [{
         id: 1,
@@ -30,7 +31,7 @@ let spot = [{
 ]
 
 
-var max = spot.reduce(function(max_age, spot) {
+let max = spot.reduce(function(max_age, spot) {
     if (max_age < spot.age) {
         max_age = spot.age;
 
@@ -47,7 +48,7 @@ spot.filter(function(r) {
 
 // b.Create another list having id and name of all the person above 18 years
 
-var min = spot.reduce(function(min_age, spot) {
+let min = spot.reduce(function(min_age, spot) {
     if (min_age > spot.age) {
         min_age = spot.age;
 
