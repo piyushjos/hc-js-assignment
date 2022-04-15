@@ -1,21 +1,20 @@
 <template>
-  <Home/>
+<div>
+
+<router-view/>
+</div>
 
 </template>
 
 
-
-
-
-
 <script>
- import Home from './views/Home.vue'
+
 export default {
-  name:'App',
-  components:{
-    Home
+  name: "App",
+  componenet:{
+
   }
-}
+};
 </script>
 
 <style>
