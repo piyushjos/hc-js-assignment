@@ -1,15 +1,18 @@
 <template>
-<div>
-    <hr>
-  <p class="para">“Shutterstock is better than any other platform we’ve played with, and we’ve played with them all.”</p>
+  <div>
+    <hr />
+    <p class="para">
+      “Shutterstock is better than any other platform we’ve played with, and
+      we’ve played with them all.”
+    </p>
     <button type="button" class="btn btn-success mb-3">Buy-Now</button>
-</div>
+  </div>
 </template>
 
 <script>
 export default {
-name: "Para"
-}
+  name: "Para",
+};
 </script>
 
 <style>
@@ -22,4 +25,5 @@ name: "Para"
   font-family: "Lucida Console", "Courier New", monospace;
   color: black;
 }
+
 </style>
