@@ -1,10 +1,12 @@
 <template>
+ <div id="home-parent" v-show="$route.name !== 'ProductDetail'">
+  </div>
   <div>
     <Nav />
     <Carousel />
     <Cards />
-   <Button :filterCategories="filterCategories" />
-   <div :posts="posts" class="all">
+    <Button :filterCategories="filterCategories" />
+    <div :posts="posts" class="all">
       <div v-for="post in posts" :key="post" class="cat">
         <!-- <h1>{{ post.category }}</h1> -->
         <div class="row">
@@ -13,17 +15,22 @@
             <div class="card-body">
               <h5 class="card-title">{{ post.title }}</h5>
               <p class="card-text">{{ post.description }}</p>
-              <a href="#" class="btn btn-primary">Buy-now</a>
+                <a @click="productDetails(post.id)" class="btn btn-primary">Buy-now</a>
+               
             </div>
           </div>
         </div>
       </div>
     </div>
-    </div>
-    <CompanySection />
-    <Para />
-    <Footer />
-  </template>
+  </div>
+  
+
+   
+ 
+  <CompanySection />
+  <Para />
+  <Footer />
+</template>
 
 
 <script>
@@ -35,6 +42,7 @@ import CompanySection from "../components/CompanySection.vue";
 import Para from "../components/Para.vue";
 import Footer from "../components/Footer.vue";
 
+
 export default {
   name: "Home",
   components: {
@@ -45,13 +53,16 @@ export default {
     Nav,
     Button,
     Footer,
+  
+    
   },
-   data() {
+  data() {
     return {
       posts: [],
       allCategories: [],
-    };
+    }
   },
+
   methods: {
     async getData() {
       try {
@@ -72,13 +83,19 @@ export default {
         });
       }
     },
+
+    productDetails(productId) {
+      this.$router.push({
+        name: 'ProductDetail',
+        params: {productId}
+      })
+    }
   },
 
   created() {
     this.getData();
   },
 };
-
 </script>
 
 
