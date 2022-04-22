@@ -8,7 +8,7 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <router-link to="/Login" class="nav-link" >Login <span class="sr-only"></span></router-link>
+        <router-link to="/Login" class="nav-link">Login<span class="sr-only"></span></router-link>
         </li>
       <li class="nav-item">
         <router-link to="/Registraion" class="nav-link">Sign-up<span class="sr-only"></span></router-link>
@@ -17,19 +17,46 @@
   </div>
 </nav>
 
-  <router-view/>
+  <!-- <router-view/> -->
   </div>
 
 </template>
 
 <script>
-import Login from './components/Login.vue'
-export default {
-    name: 'Demo',
-    components:{
-Login
+
+
+
+import axios from 'axios'
+import { setupCache } from 'axios-cache-adapter'
+    export default {
+        name: 'ClientHeader',
+        mounted() {
+          
+            const cache = setupCache({
+                maxAge: 15 * 60 * 1000
+            })
+            
+            const api = axios.create({
+                adapter: cache.adapter
+            })
+        
+            api({
+                url: 'https://fakestoreapi.com/products',
+                method: 'get'
+            }).then(async (response) => {
+          
+                console.log('Request response:', response)
+            
+                const length = await cache.store.length()
+                console.log('Cache store length:', length)
+            })
+        }, 
+        methods: {
+            something(e){
+                e.preventDefault()
+            }
+        }, 
     }
-}
 </script>
 <style>
 #app {
